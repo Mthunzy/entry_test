@@ -43,7 +43,7 @@ Expected result:
 ## Test Scenario 2: DecentralisedRaffle
 **Target:** `DecentralisedRaffle.sol`
 
-.1 Happy path
+2.1 Happy path
 
 Description: Multiple entrants, VRF draw, payout. Steps:
 
@@ -68,7 +68,7 @@ Description: Randomness manipulation attempt + insufficient funds. Steps:
     Eve tries requestDraw() before any tickets sold.
     Owner tries to call fulfillRandomWords directly with a chosen random word.
     Test calling buyTickets after draw but before state reset.
-    
+
 Expected result:
 
     Draw with zero tickets reverts (“No tickets”).

@@ -166,6 +166,10 @@ MetaMask alternatives
 - Community resources
 
 [List 3-5 resources you used]
+- **[Solidity Docs](https://docs.soliditylang.org/)** - Complete language reference
+- **[Solidity by Example](https://solidity-by-example.org/)** - Practical code examples
+- **[OpenZeppelin Docs](https://docs.openzeppelin.com/)** - Secure contract libraries
+- **[Remix IDE](https://remix.ethereum.org/)** - Browser-based development environment
 
 ---
 
