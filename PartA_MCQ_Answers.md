@@ -30,9 +30,12 @@
 - **D)** Build everything as separate NFT collections with no DEX integration since providers won't understand DeFi protocols.  
 
 **Your Answer:** [A/B/C/D]  
+             : B
 
 **Your Reasoning:**  
 [2–3 sentences explaining why you chose this answer. What makes it the best choice?]  
+
+Option B best leverages blockchain's strengths for this use case. ERC-1155 tokens are efficient for batch listing energy credits, crucial for providers. Storing reputation on-chain ensures transparency and immutability, while integrating with a DEX like Uniswap directly fulfills the need for intermediary-free, trustless swaps between providers and buyers, aligning with decentralization principles.
 
 ---
 
@@ -54,15 +57,34 @@ A solar micro-grid provider wants to list 40 energy credit bundles. Gas costs ar
 - **D)** ERC-1155 is cheaper by approximately $180  
 
 **Your Answer:** [A/B/C/D]  
+             : D
 
 **Your Calculation/Reasoning:**  
+
+    ERC-721 Total Gas: 40 items * 100,000 gas/item = 4,000,000 gas
+    ERC-1155 Total Gas: 150,000 gas (initial) + (39 items * 5,000 gas/item) = 150,000 + 195,000 = 345,000 gas
+    Gas Difference: 4,000,000 gas - 345,000 gas = 3,655,000 gas
+    Gas Price: 20 gwei = 0.000000020 ETH
+    ETH Price: $3,000
+    Cost Difference in USD: 3,655,000 gas * 0.000000020 ETH/gas * $3,000/ETH = $219.30
+
 - ERC-721 cost = [Show calculation]
+               = 100,000 * 40
+               = 4,000,000 * 0.026
+               = 104,000
 - ERC-1155 cost = [Show calculation]
+                = 150,000 + 5,000*39
+                = 345,000 * 0.026
+                = 8,970
 - Difference = [Show calculation]
 
 
 [Explain why gas optimisation matters for African users]  
 
+Cost is King: High transaction fees (gas fees) can really hit hard, especially in regions where disposable income might be lower. If a simple crypto transaction costs a significant percentage of the amount being transferred, it makes using blockchain applications impractical for many people. Optimized gas usage means lower fees, which makes crypto more accessible and affordable for a wider audience.
+Encourages Adoption: When transaction costs are low and predictable, more people are likely to try out and regularly use blockchain-based services like DeFi (Decentralized Finance) or NFTs. High, unpredictable fees are a major turn-off and can stop mainstream adoption in its tracks.
+Enables More Use Cases: Lower gas costs mean that more frequent and complex interactions on the blockchain become viable. This can open up opportunities for micro-transactions, remittances, or other services that wouldn't make sense if each small operation incurred a hefty fee. Gas optimization allows for more sophisticated functionality within reasonable cost limits.
+Fairer Access: Without gas optimization, only "whales" (users with large capital) might be able to efficiently participate in certain DeFi strategies or NFT mints, creating a barrier to entry for smaller retail users. Optimization helps level the playing field. 
 ---
 
 ### Question 3: Value Proposition Explanation (Communication & Thinking)
