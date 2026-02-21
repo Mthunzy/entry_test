@@ -68,16 +68,6 @@ A solar micro-grid provider wants to list 40 energy credit bundles. Gas costs ar
     ETH Price: $3,000
     Cost Difference in USD: 3,655,000 gas * 0.000000020 ETH/gas * $3,000/ETH = $219.30
 
-- ERC-721 cost = [Show calculation]
-               = 100,000 * 40
-               = 4,000,000 * 0.026
-               = 104,000
-- ERC-1155 cost = [Show calculation]
-                = 150,000 + 5,000*39
-                = 345,000 * 0.026
-                = 8,970
-- Difference = [Show calculation]
-
 
 [Explain why gas optimisation matters for African users]  
 
@@ -99,10 +89,11 @@ A micro-grid provider asks: *"Why can't we just use a normal website with a data
 - **D)** "Blockchain uses cryptography which makes it unhackable, unlike normal databases."  
 
 **Your Answer:** [A/B/C/D]  
+             : B
 
 **Your Explanation:**  
 [2–3 sentences explaining what makes this answer correct. What did you learn about why blockchain matters in Africa?]  
-
+This response really gets to the heart of why blockchain is useful, especially for something like a micro-grid where trust and transparency are super important. It highlights tangible benefits like preventing manipulation of records and providing undeniable proof of transactions. Plus, the idea of owning your reputation score on-chain and being able to take it to other platforms is a powerful value proposition, especially in contexts where trust-building and verifiable history can be challenging. It's not just about the tech, but what the tech enables for users.
 ---
 
 ## PART 2: DeFi & NFT Integration (Advanced Concepts)
@@ -126,6 +117,7 @@ A micro-grid provider asks: *"Why can't we just use a normal website with a data
 - **D)** The constant product formula prevents any impermanent loss by automatically rebalancing. DAOs cannot implement financial protections due to smart contract immutability. ERC-1155 tokens are incompatible with standard DEX protocols.  
 
 **Your Answer:** [A/B/C/D]  
+             : B
 
 **Your Reasoning:**  
 
@@ -133,6 +125,30 @@ A micro-grid provider asks: *"Why can't we just use a normal website with a data
 - **DeFi Governance:** What is impermanent loss and how does protection work?  
 - **Token Standards:** Why might ERC-1155 be preferred over ERC-721 for marketplace integration?  
 
+MM Mathematics:
+
+    Initial k = 5 ETH * 15,000 USDC = 75,000.
+    After the trader adds 1 ETH, the new ETH amount is 5 + 1 = 6 ETH.
+    To maintain k = 75,000, the new USDC amount y would be 75,000 / 6 = 12,500 USDC.
+    The trader receives 15,000 - 12,500 = 2,500 USDC. So, option B's calculation is correct.
+    Option A is incorrect because constant product AMMs do not maintain equal USD value after a swap; they are designed to maintain the product constant. This leads to impermanent loss.
+    Option C correctly identifies impermanent loss, but the reasoning about ERC-721 is flawed.
+    Option D is incorrect; the constant product formula causes impermanent loss, it doesn't prevent it.
+
+DeFi Governance (Impermanent Loss Protection):
+
+    Impermanent loss (IL) is the divergence in value an LP experiences compared to simply holding their assets, caused by price changes in the pooled assets.
+    Impermanent loss protection mechanisms aim to compensate LPs for this potential loss. Option B accurately describes this.
+    Option D is incorrect because DAOs can absolutely implement financial protections; smart contract immutability applies to the deployed contract, but governance can upgrade or add new contracts to provide such features.
+
+Token Standards (ERC-1155 vs. ERC-721):
+
+    ERC-1155 tokens are "multi-token standard" supporting both fungible and non-fungible tokens, allowing for efficient batch transfers of different token types within a single transaction. This gas efficiency is a significant advantage for marketplaces.
+    ERC-721 tokens represent unique, non-fungible assets (like individual NFTs) and generally require one transaction per token transfer.
+    Option B correctly states that ERC-1155's batch transfer capability makes it more gas-efficient than ERC-721 for marketplace integration.
+    Option A is incorrect in saying ERC-1155 cannot be traded on AMMs; while less common than fungible tokens, it's technically possible, and the core issue of A is the AMM math.
+    Option C is incorrect; for a marketplace dealing with many unique items or even bundles, ERC-1155 can be more efficient precisely because of its multi-token nature, not less suitable.
+    Option D is incorrect; ERC-1155 tokens can be compatible with DEX protocols, especially those designed for NFT liquidity.*
 [2–3 sentences synthesising these concepts into a coherent explanation]  
 
 ---
