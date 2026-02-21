@@ -191,3 +191,4 @@ contract DecentralisedRaffle {
         require(isPaused, "Raffle is not paused");
         isPaused
     }
+}
